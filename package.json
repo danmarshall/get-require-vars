@@ -1,7 +1,7 @@
 {
   "name": "get-require-vars",
-  "version": "1.0.0",
-  "description": "Get the variables that call require() in a js file, as a new JavaScript statement.",
+  "version": "1.0.1",
+  "description": "Gets the calls to require() using node-detective plus the JavaScript variable declaration that calls them.",
   "main": "index.js",
   "scripts": {
   },
