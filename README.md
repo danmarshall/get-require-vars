@@ -1,5 +1,5 @@
 # get-require-vars
-Get the variables that call require() in a js file.
+Get the variables that call require() in a js file, as a new JavaScript statement.
 
 ## Install
 
