@@ -1,7 +1,7 @@
 {
   "name": "get-require-vars",
   "version": "1.0.0",
-  "description": "Get the variables that call require() in a js file.",
+  "description": "Get the variables that call require() in a js file, as a new JavaScript statement.",
   "main": "index.js",
   "scripts": {
   },
@@ -18,8 +18,5 @@
   "dependencies": {
     "detective": "^4.1.0",
     "escodegen": "^1.6.1"
-  },
-  "devDependencies": {
-    "tap": "^1.2.0"
   }
 }
