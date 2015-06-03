@@ -1,5 +1,5 @@
 # get-require-vars
-Get the variables that call require() in a js file, as a new JavaScript statement.
+Gets the calls to require() using [node-detective](https://github.com/substack/node-detective) plus the JavaScript variable declaration that calls them.
 
 ## Install
 
@@ -7,13 +7,15 @@ Clone this repo, then run:
 
 `npm install`
 
-## Run
-
-`node index.js <filename>`
-
 ## Example
 
-`node index.js index.js`
+`node example/test.js index.js`
 
 ### outputs
-var detective = require('detective'),fs = require('fs'),escodegen = require('escodegen')
+``` js
+{
+   requires: ['detective', 'escodegen'],
+   statement: 'var detective = require(\'detective\'),escodegen = require(\'escodegen\')'
+}
+```
+

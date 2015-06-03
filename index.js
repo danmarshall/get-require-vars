@@ -1,16 +1,10 @@
 var detective = require('detective');
-var fs = require('fs');
 var escodegen = require('escodegen');
-
-var userArgs = process.argv.splice(2);
-
-var filename = userArgs[0];
-
-var src = fs.readFileSync(filename);
 
 var requireStatements = [];
 
-var opts = {
+var detectiveOpts = {
+    
     isRequire : function (node) {
         var c = node.callee;
         
@@ -28,6 +22,13 @@ var opts = {
     }
 };
 
-var requires = detective(src, opts);
+module.exports = function(src, opts) {
 
-process.stdout.write('var ' + requireStatements.join(','));
+    var requires = detective(src, opts || detectiveOpts);
+    var statement = 'var ' + requireStatements.join(',');
+    
+    return {
+        requires: requires,
+        statement: statement
+    };
+}
